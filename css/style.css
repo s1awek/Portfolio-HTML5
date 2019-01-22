@@ -1,7 +1,15 @@
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  color: #222; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Proza Libre', sans-serif; }
+
+a {
+  color: #084f5b;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out; }
+  a:hover {
+    color: #0e8ca1; }
 
 /*# sourceMappingURL=../maps/style.css.map */
