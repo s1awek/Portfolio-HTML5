@@ -16,6 +16,7 @@
   "author": "Sławek Kasprzak",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-sass": "^4.0.1",
