@@ -11,6 +11,11 @@
 
     <!-- Default Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Slick carousel CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- Ekko lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -18,9 +23,10 @@
     <link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700|Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container container-main">
-        <nav class="navbar navbar-expand-lg sticky-top fixed-top" id="home">
+<body class="lng-pl">
+    <p class="top-anchor" id="home"></p>
+    <div class="container container-top fixed-top">
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand logo-link" href="#home">
                 <p class="logo-container"><span class="logo-1">well</span><span class="logo-2">made</span><span class="logo-dot">.</span><span
                         class="logo-3">online</span></p>
@@ -32,29 +38,48 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">oferta<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#about">O mnie<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">projekty</a>
+                        <a class="nav-link" href="#offer">Oferta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">kontakt</a>
+                        <a class="nav-link" href="#portfolio">Projekty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                    <li class="nav-item nav-item__language">
+                        <a href="#" class="nav-link nav-link__en pl" data-toggle="tooltip" data-placement="top" title="Change language">
+                            <img src="img/flag-en.svg" alt="Flag ENG" class="flag flag--en">
+                        </a>
+                        <a href="#" class="nav-link nav-link__pl en" data-toggle="tooltip" data-placement="top" title="Zmień język">
+                            <img src="img/flag-pl.svg" alt="Flag PL" class="flag flag--pl">
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <section class="section-top-main">
-            <div class="section-top-main__container">
-                <div class="section-top-main__logo-container">
-                    <p class="logo-container"><span class="logo-1">well</span><span class="logo-2">made</span><span
-                            class="logo-dot">.</span><span class="logo-3">online</span></p>
+    </div>
+    <!--.container-top -->
+    <div class="container-fluid container-slider">
+        <section class="section-slider">
+            <div class="section-slider__container">
+                <div class="section-slider__logo-container">
+                    <h1 class="logo-container"><span class="logo-1">well</span><span class="logo-2">made</span><span
+                            class="logo-dot">.</span><span class="logo-3">online</span></h1>
                 </div>
+                <h2 class="motto">Twoje miejsce w Internecie</h2>
             </div>
         </section>
-        <section class="offer-lead">
+    </div>
+    <!--.container-slider -->
+
+    <section class="about-lead" id="about">
+        <div class="container container-about">
             <div class="row row-lead">
                 <div class="col-md-7 col-text">
-                    <h2 class="header-simple">Profesjonalne podejście</h2>
+                    <h3 class="header-simple">Profesjonalne podejście</h3>
                     <p class="paragrapf-simple">Specjalizuję się w tworzeniu pięknych i funkcjonalnych stron
                         internetowych, z zachowaniem wszelkich wymaganych standardów. Moimi mocnymi stronami są
                         profesjonalne podejście do klienta, rzetelność, sumienność, dokładność oraz - możliwe że
@@ -62,20 +87,23 @@
                     <p class="patagraph-simple">Zapewniam kompletną obsługę wszelkich wymagań klienta, zaczynając od
                         planowania oraz projektu graficznego, poprzez wdrożenie projektu w życie, a kończąc na obsłudze
                         powdrożeniowej oraz wsparciu technicznym.</p>
+                    <a href="#contact" class="btn btn-simple pl">Więcej</a>
                 </div>
                 <div class="col-md-5 col-img">
                     <div class="img-container">
-                        <img src="img/img-regular-keyboard.jpg" alt="Computer keyboard" class="img-info">
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="offer">
+        </div>
+    </section>
+
+    <div class="container container-main">
+        <section class="offer" id="offer">
             <div class="row row-offer">
                 <div class="col-md-6 col-offer">
                     <div class="offer-inner">
-                        <div class="offer-inner__ico"><i class="fas fa-globe"></i></div>
-                        <h4 class="offer-inner__header">strony internetowe</h4>
+                        
+                        <h4 class="header-simple offer-inner__header"><span class="offer-inner__ico"><i class="fas fa-globe"></i></span>strony internetowe</h4>
                         <p class="offer-inner__paragraph">Gdy chcesz zaistnieć w internecie, aby być widocznym dla
                             swoich
                             klientów i podnieść prestiż oraz rozpoznawalność firmy, potrzebujesz strony internetowej.
@@ -88,8 +116,7 @@
                 </div>
                 <div class="col-md-6 col-offer">
                     <div class="offer-inner">
-                        <div class="offer-inner__ico"><i class="fas fa-shopping-cart"></i></div>
-                        <h4 class="offer-inner__header">sklepy internetowe</h4>
+                        <h4 class="header-simple offer-inner__header"><span class="offer-inner__ico"><i class="fas fa-shopping-cart"></i></span>sklepy internetowe</h4>
                         <p class="offer-inner__paragraph">Obecnie niemal każdy biznes można przenieść do internetu.
                             Sprzedaż poprzez własny sklep internetowy jest prosta, a jego obsługa jest intuicyjna i
                             przyjazna użytkownikowi. Po krótkim "szkoleniu" może to robić dosłownie każdy, nie jest
@@ -101,8 +128,7 @@
                 </div>
                 <div class="col-md-6 col-offer">
                     <div class="offer-inner">
-                        <div class="offer-inner__ico"><i class="fas fa-wrench"></i></div>
-                        <h4 class="offer-inner__header">serwis i hosting</h4>
+                        <h4 class="header-simple offer-inner__header"><span class="offer-inner__ico"><i class="fas fa-wrench"></i></span>serwis i hosting</h4>
                         <p class="offer-inner__paragraph">Dzięki temu że zapewniam hosting, obsługę i rejestrację
                             domeny, oraz wszelkie inne niezbędne szczegóły techniczne, możesz spać spokojnie i nie
                             martwić się o techniczną stronę projektu.</p>
@@ -110,8 +136,7 @@
                 </div>
                 <div class="col-md-6 col-offer">
                     <div class="offer-inner">
-                        <div class="offer-inner__ico"><i class="fas fa-language"></i></div>
-                        <h4 class="offer-inner__header">seo i wielojęzyczność</h4>
+                        <h4 class="header-simple offer-inner__header"><span class="offer-inner__ico"><i class="fas fa-language"></i></span>seo i wielojęzyczność</h4>
                         <p class="offer-inner__paragraph">Projekty dla klientów wykonuje w oparciu o sprawdzony i
                             popularny CMS WordpPress. System ten, dzięki pracy kilku tysięcy programistów z całego
                             świata, jest często aktualizowany i bieżąco wprowadzane są do niego nowinki ze świata IT.
@@ -123,49 +148,57 @@
                 </div>
             </div>
         </section>
-        <section class="responsive">
+    </div><!--.container-main -->
+    <section class="responsive" id="responsive">
+        <div class="container container-responsive">
             <div class="row row-responsive">
                 <div class="col-md-4 col-responsive-img">
                     <div class="img-responsive-wrap">
-                        <img src="..." alt="Devices showing responsive website" class="img-responsive">
+
                     </div>
                 </div>
                 <div class="col-md-8 col-responsive-text">
-                    <h4 class="simple-header">strony wyglądające dobrze na każdym urządzeniu</h4>
-                    <p class="simple-paragraph">Obecnie strony internetowe przeglądane są w dużej mierze z urządzeń
+                    <h4 class="header-simple">strony wyglądające dobrze na każdym urządzeniu</h4>
+                    <p class="paragraph-simple">Obecnie strony internetowe przeglądane są w dużej mierze z urządzeń
                         mobilnych: tabletów, smartfonów czy smartTV. Wiedząc o tym, tworzę strony które prezentują się
                         wyśmienicie na każdym ekranie, niezależnie od jego wielkości i rozdzielczości. Dzięki
                         wbudowanej responsywności, wygląd strony automatycznie dostosuje się do rozmiaru i rodzaju
                         urządzenia na którym jest przeglądana.</p>
                 </div>
             </div>
-        </section>
-        <section class="customers">
-            <div class="row row-customers">
-                <div class="col-md-8 col-customers-text">
-                    <h4 class="simple-header">indywidualne podejście do klienta</h4>
-                    <p class="simple-paragraph">Każdego klienta traktuję równie poważnie i profesjonalnie, niezależnie
+        </div>
+    </section>
+    <div class="container container-busines">
+        <section class="business" id="business">
+            <div class="row row-business">
+                <div class="col-md-8 col-business-text">
+                    <h4 class="header-simple">indywidualne podejście do klienta</h4>
+                    <p class="paragraph-simple">Każdego klienta traktuję równie poważnie i profesjonalnie, niezależnie
                         od wielkości zleconego projektu. Bardzo zależy mi na indywidualnym podejściu, jestem też
                         ekstremalnie uczciwy bo uważam że zaufanie jest podstawą każdej dobrej relacji, także na linii
                         biznesowej. Doradzę, podpowiem, pomogę.</p>
                 </div>
-                <div class="col-md-4 col-customers-img">
-                    <div class="img-customers-wrap">
-                        <img src="..." alt="Happy Customer" class="img-customer">
+                <div class="col-md-4 col-business-img">
+                    <div class="img-business-wrap">
+
                     </div>
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+    </div>
+    <section class="portfolio" id="portfolio">
+        <div class="container-fluid container-portfolio">
             <div class="row row-portfolio">
                 <div class="col-12 col-portfolio-header">
-                    <h2 class="simple-header">Moje portfolio</h2>
-                    <p class="simple-paragraph">Oto kilka projektów które stworzyłem lub brałem w nich udział jako
+                    <h2 class="header-simple">Moje portfolio</h2>
+                    <p class="paragraph-simple">Oto kilka projektów które stworzyłem lub brałem w nich udział jako
                         część większego zespołu</p>
                 </div>
                 <div class="row-carousel">
-                    <div class="portfolio-item">
-                        <a href="https://zoe.traficar.pl/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--traficar">
+                        <div class="portfolio-item__link-wrap">
+                            <a href="img/screen-zoe-traficar-pl.png" class="portfolio-item__link portfolio-item__link--ico portfolio-item__link--ico-img" data-toggle="lightbox"><i data-toggle="tooltip" data-placement="top" title="Zobacz zrzut ekranu" class="far fa-image"></i> </a>
+                            <a href="https://zoe.traficar.pl/" class="portfolio-item__link portfolio-item__link--ico portfolio-item__link--ico-chain" target="_blank"><i data-toggle="tooltip" data-placement="top" title="Zobacz stronę" class="fas fa-link"></i></a>
                             <h4 class="portfolio-item__header">
                                 Traficar Landingpage
                             </h4>
@@ -173,16 +206,18 @@
                                 Stosunkowo prosta, ale ładna i przejrzysta strona którą wykonałem zgodnie z projektem
                                 klienta
                             </p>
+                            <span class="portfolio-item__before pl">Technologie:</span>
                             <div class="portfolio-item__technologies">
                                 <i class="fab fa-css3-alt"></i>
                                 <i class="fab fa-html5"></i>
                                 <i class="fab fa-js-square"></i>
                                 <i class="fab fa-adobe"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://diag.pl/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--diag">
+                        <div class="portfolio-item__link-wrap">
+                                <a href="img/screen-zoe-traficar-pl.png" class="portfolio-item__link portfolio-item__link--ico portfolio-item__link--ico-img" data-toggle="tooltip" data-placement="top" title="Zobacz zrzut ekranu"><i class="far fa-image"></i></a>
                             <h4 class="portfolio-item__header">
                                 Diagnostyka
                             </h4>
@@ -199,10 +234,10 @@
                                 <i class="fab fa-php"></i>
                                 <i class="fas fa-shopping-cart"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://adrianafurniture.com/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--adrian">
+                        <a href="https://adrianafurniture.com/" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 Adriana Furniture - Sklep Meblowy
                             </h4>
@@ -219,8 +254,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://grupagpec.pl/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--gpec">
+                        <a href="https://grupagpec.pl/" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 Grupa GPEC
                             </h4>
@@ -237,8 +272,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="http://www.visitbydgoszcz.pl/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--bydgoszcz">
+                        <a href="http://www.visitbydgoszcz.pl/" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 Bydgoskie Centrum Informacji
                             </h4>
@@ -255,8 +290,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="http://popsandbangs.com/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--pab">
+                        <a href="http://popsandbangs.com/" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 Pops and Bangs
                             </h4>
@@ -273,8 +308,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://eccoprojekt.pl/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--eccop">
+                        <a href="https://eccoprojekt.pl/" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 Eccoprojekt
                             </h4>
@@ -291,8 +326,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://eccoprojekt.pl/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--zdmikp">
+                        <a href="http://www.zdmikp.bydgoszcz.pl" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 ZDMIKP Bydgoszcz
                             </h4>
@@ -309,8 +344,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://arcadius-atelier.com/" class="portfolio-item__link" target="_blank">
+                    <div class="portfolio-item portfolio-item--arcadius">
+                        <a href="https://arcadius-atelier.com/" class="portfolio-item__link-wrap" target="_blank">
                             <h4 class="portfolio-item__header">
                                 Sklep Meblowy Arcadius Furniture
                             </h4>
@@ -330,17 +365,18 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <footer>
+        </div>
+    </section>
+    <footer id="contact">
         <div class="container-fluid">
             <div class="row row-footer">
                 <div class="col-md-4 col-info">
-                    <h3 class="simple-header simple-header--light">
+                    <h3 class="header-simple header-simple--light">
                         Kontakt
                     </h3>
-                    <p class="simple-paragraph simple-paragraph--light">
-                        Kontaktuj się w dowolnej sprawie, w dowolnej formie, nawet jeśli tylko chcesz powiedzieć "cześć" ;)
+                    <p class="paragraph-simple paragraph-simple--light">
+                        Kontaktuj się w dowolnej sprawie, w dowolnej formie, nawet jeśli chcesz tylko powiedzieć
+                        "cześć" ;)
                     </p>
                     <div class="info-item">
                         <div class="info-item__icon">
@@ -390,7 +426,8 @@
                         </div>
                         <div class="about-item__text-wrap">
                             <p class="about-item__name">Sławek K.</p>
-                            <p class="about-item__text">Jestem programistą, fotografikiem i turystą. Lubię czytać książki i
+                            <p class="about-item__text">Jestem programistą, fotografikiem i turystą. Lubię czytać
+                                książki i
                                 chodzić po górach.</p>
                         </div>
                     </div>
@@ -404,9 +441,10 @@
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

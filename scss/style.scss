@@ -1,6 +1,10 @@
 //Colors
-$color-base: #084f5b;
-$color-accent: #5c1408;
+$color-base:rgb(0, 170, 160);
+$color-accent: rgb(255, 122, 90);
+$color-complementary-1: rgb(255, 184, 95);
+$color-complementary-2: rgb(70, 32, 102); 
+$color-complementary-3: rgb(142, 210, 201);
+$color-complementary-4: rgb(252, 244, 217);
 
 $color-grey-1: #eee;
 $color-grey-2: #ccc;
@@ -13,13 +17,21 @@ $color-grey-7: #222;
 //Transition
 $transition: all 0.25s ease-in-out;
 
+//Radius
+$radius: 4px;
+
+//Box Shadow
+$shadow-contour: 0 0 7px 1px rgba(0,0,0,0.2);
+
 //General
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: $color-grey-7;
+	color: $color-grey-6;
+	font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Proza Libre', sans-serif;
+	color: $color-grey-7;
 }
 
 a {
@@ -28,5 +40,336 @@ a {
 	transition: $transition;
 	&:hover {
 		color: lighten($color-base, 15%);
+		text-decoration: none;
+	}
+}
+.header-simple {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 1em;
+	&--light {
+		color: #fff;
+	}
+}
+.paragraph-simple {
+	color: $color-grey-6;
+}
+.btn-simple {
+	color: #fff;
+	background-color: $color-complementary-2;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	border: none;
+	box-shadow: none;
+	display: inline-block;
+	font-size: 0.85rem;
+	&:hover {
+		background-color: lighten($color-complementary-2, 30%);
+		color: #fff;
+	}
+}
+
+//Language 
+.lng-pl {
+	.en {
+		display: none;
+	}
+}
+
+.lng-en {
+	.pl {
+		display: none;
+	}
+}
+
+//Top anchor for #home
+.top-anchor {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+//Logo
+.logo-1 {
+	color: $color-base;
+	font-size: 1rem;
+}
+.logo-2 {
+	color: $color-base;
+	font-size: 1rem;
+}
+.logo-dot {
+	color: $color-accent;
+	font-size: 2rem;
+	line-height: 0.9rem;
+    display: inline-block;
+}
+.logo-3 {
+	color: $color-base;
+	font-size: 1rem;
+}
+
+//Navbar
+.navbar {
+	font-weight: bold;
+	.logo-container {
+		display: flex;
+	}
+	.nav-item {
+		margin-right: 2rem;
+		&:last-child {
+			margin-right: 0;
+		}
+		&__language {
+			display: inline-block;
+			width:50px;
+			.flag {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+.logo-container {
+	margin:0;
+	margin-bottom: 0;
+	font-weight: bold;
+	font-family: 'Proza Libre', sans-serif;
+}
+
+//Slider
+.container-slider {
+	padding: 0;
+}
+.section-slider {
+	&__container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 100vh;
+		background: #fff url(../img/slider-bg.jpg) center center no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0,0,0 ,0.8);
+			z-index: 0;
+		}
+	}
+	&__logo-container {
+		white-space: nowrap;
+		position: relative;
+		margin-bottom: 3rem;
+		z-index: 1;
+		text-align: center;
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 50%;
+			height: 1px;
+			background-color: $color-complementary-3;
+			position: relative;
+			top: 1rem;
+		}
+		.logo-1 {
+			font-size: 2rem;
+		}
+		.logo-2 {
+			font-size: 2rem;
+		}
+		.logo-dot {
+			font-size: 4rem;
+		}
+		.logo-3 {
+			font-size: 2rem;
+		}
+	}
+	.motto {
+		color: #fff;
+		font-weight: bold;
+		position: relative;
+		z-index: 1;
+		font-size: 4rem;
+		max-width: 30rem;
+		text-align: center;
+	}
+}
+
+.about-lead {
+	background-color: $color-grey-1;
+	.row-lead {
+		.img-info {
+			max-width: 100%;
+			height: 100%; 
+		}
+		.img-container {
+			height: 100%;
+
+			background: url(../img/img-regular-keyboard.jpg) center center no-repeat;
+			background-size: cover;
+		}
+		.col-text {
+			padding-top: 7rem;
+			padding-bottom: 7rem;
+			padding-right: 5rem;
+		}
+	}
+}
+
+.offer {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	.col-offer {
+		.offer-inner {
+			padding: 2rem 1rem;
+			&__ico {
+				position: absolute;
+				left:0;
+				top:0;
+				color: $color-accent;
+			}
+			&__header {
+				position: relative;
+				padding-left: 2.5rem;
+			}
+		}
+	}
+}
+
+.responsive {
+	background-color: $color-grey-1;
+	.img-responsive-wrap {
+		width: 100%;
+		height: 100%;
+		background: url(../img/responsieve_mockup.png) center center no-repeat;
+		background-size: contain;
+	}
+	.col-responsive-text {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		padding-left: 5rem;
+	}
+}
+
+.business {
+	.img-business-wrap {
+		width: 100%;
+		height: 100%;
+		background: url(../img/img-advise.jpg) center center no-repeat;
+		background-size: cover;
+	}
+	.col-business-text {
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+	}
+}
+
+.portfolio {
+	.row-carousel {
+		max-width: 100%;
+		margin:auto;
+	}
+	.portfolio-item {
+		padding-bottom: 0;
+		overflow: hidden;
+		height: 270px;
+		background-color: $color-grey-2;
+		&__link {
+			position: absolute;
+			z-index: 1;
+
+			&--ico {
+				font-size: 3rem;
+				color: $color-base;
+				transition: $transition;
+			}
+			&--ico-img {
+				top: -3rem;
+				left: -3rem;
+				&:hover {
+					color: lighten($color-base, 30%);
+				}
+
+			}
+			&--ico-chain {
+				top: -3rem;
+				right: -3rem;
+				&:hover {
+					color: lighten($color-base, 30%);
+				}
+			}
+			.far {
+				//background-color: $color-complementary-4;
+				display: inline-block;
+				line-height: 0.6em;
+			}
+			.fas {
+				display: inline-block;
+				font-size: 2.5rem;
+
+			}
+		}
+		&__link-wrap {
+			padding: 3rem;
+			display: block;
+			position: relative;
+			z-index: 0;
+			height: 100%;
+			transition: $transition;
+			&:hover {
+				transform: scale(1.1);
+				.portfolio-item__link--ico-img {
+					top: 1rem;
+					left: 2rem;
+				}
+				.portfolio-item__link--ico-chain {
+					top: 0.7rem;
+					right: 2rem;
+				}
+			}
+		}
+		&__header {
+			color: $color-grey-1;
+		}
+		&__description {
+			color: #fff;
+		}
+		&__technologies {
+			color: $color-complementary-4;
+			position: absolute;
+			bottom: 3rem;
+			left: 3;
+			.fab {
+				margin-right: 0.5em;
+			}
+		}
+		&__before {
+			position: absolute;
+			bottom: 4.5rem;
+			left: 3rem;
+			color: $color-grey-3;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
+		&--traficar {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-zoe-traficar-pl.png) top left no-repeat;
+				background-size: cover;
+			}
+		}
 	}
 }
