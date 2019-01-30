@@ -43,6 +43,9 @@ a {
 		text-decoration: none;
 	}
 }
+.hidden {
+	display: none!important;
+}
 .header-simple {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -53,6 +56,9 @@ a {
 }
 .paragraph-simple {
 	color: $color-grey-6;
+	&--light {
+		color: #fff;
+	}
 }
 .btn-simple {
 	color: #fff;
@@ -279,10 +285,32 @@ a {
 }
 
 .portfolio {
+	padding-top: 5rem;
 	.row-carousel {
 		max-width: 100%;
 		margin:auto;
 	}
+	.container-portfolio {
+		position: relative;
+		padding: 0;
+		.slick-arrow {
+			position: absolute;
+			top: calc(50% - 1.5rem);
+			border: none;
+			background-color: transparent;
+			font-size: 3rem;
+			color: #fff;
+			cursor: pointer;
+			z-index: 1000000;
+		}
+		.slick-prev {
+			left: 2%;
+		}
+		.slick-next {
+			right: 2%;
+		}
+	}
+
 	.portfolio-item {
 		padding-bottom: 0;
 		overflow: hidden;
@@ -299,32 +327,19 @@ a {
 			}
 			&--ico-img {
 				top: -3rem;
-				left: -3rem;
-				&:hover {
-					color: lighten($color-base, 30%);
-				}
-
-			}
-			&--ico-chain {
-				top: -3rem;
 				right: -3rem;
 				&:hover {
 					color: lighten($color-base, 30%);
 				}
 			}
 			.far {
-				//background-color: $color-complementary-4;
 				display: inline-block;
 				line-height: 0.6em;
-			}
-			.fas {
-				display: inline-block;
-				font-size: 2.5rem;
-
 			}
 		}
 		&__link-wrap {
 			padding: 3rem;
+			padding-bottom: 2rem;
 			display: block;
 			position: relative;
 			z-index: 0;
@@ -333,17 +348,17 @@ a {
 			&:hover {
 				transform: scale(1.1);
 				.portfolio-item__link--ico-img {
-					top: 1rem;
-					left: 2rem;
-				}
-				.portfolio-item__link--ico-chain {
-					top: 0.7rem;
-					right: 2rem;
+					top: 2rem;
+					right: 3.5rem;
 				}
 			}
 		}
 		&__header {
 			color: $color-grey-1;
+			.header-link {
+				color: $color-grey-1;
+				text-decoration: underline;
+			}
 		}
 		&__description {
 			color: #fff;
@@ -351,15 +366,15 @@ a {
 		&__technologies {
 			color: $color-complementary-4;
 			position: absolute;
-			bottom: 3rem;
-			left: 3;
+			bottom: 2rem;
+			left: 3rem;
 			.fab {
 				margin-right: 0.5em;
 			}
 		}
 		&__before {
 			position: absolute;
-			bottom: 4.5rem;
+			bottom: 3.5rem;
 			left: 3rem;
 			color: $color-grey-3;
 			font-size: 0.75rem;
@@ -367,9 +382,149 @@ a {
 		}
 		&--traficar {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-zoe-traficar-pl.png) top left no-repeat;
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-zoe-traficar-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
+		}
+		&--diag {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-diag-pl.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--adriana {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-adrianafurniture-com.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--gpec {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-grupagpec-pl.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--bydgoszcz {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-visitbydgoszcz-pl.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--pab {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-popsandbangs-com.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--eccop {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-eccoprojekt-pl.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--zdmikp {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-zdmikp-bydgoszcz-pl.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+		&--arcadius {
+			.portfolio-item__link-wrap {
+				background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/screen-arcadius-atelier-com.jpg) top left no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+.contact {
+	padding-top: 3rem;
+	background-color: #000;
+	.contact-intro {
+		margin-bottom: 3rem;
+	}
+	.info-item {
+		display: flex;
+		margin-bottom: 2rem;
+		&__icon {
+			color: $color-complementary-3;
+			margin-right: 0.5rem;
+			width: 2rem;
+			font-size: 1.5rem;
+			display: flex;
+			justify-content: center;
+		}
+		&__paragraph {
+			margin-bottom: 0;
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+		}
+	}
+	.col-form {
+		padding: 0 2rem;
+		display: flex;
+    	flex-direction: column;
+		&__name {
+
+		}
+	}
+	::placeholder {
+		color: $color-grey-3;
+	}
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		&__item {
+			margin-bottom: 1rem;
+			padding: 0.5rem 1rem;
+			border-radius: $radius;
+		}
+	}
+	.contact-form__message {
+		display: flex;
+		margin-bottom: 1rem;
+		padding: 0.5rem 1rem;
+		border-radius: $radius;
+		width: 100%;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+	.about-item {
+		border: 1px solid #fff;
+		border-radius: $radius;
+		padding: 1.5rem;
+		&__header {
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding-left: calc(100px + 1.5rem);
+		}
+		&__inner {
+			display: flex;
+			align-items: flex-end;
+		}
+		&__img-wrap {
+			min-width: 100px;
+			width: 100px;
+			height: 100px;
+			border-radius: $radius;
+			overflow: hidden;
+		}
+		&__img {
+			max-width: 100%;
+		}
+		&__text-wrap {
+			padding-left: 1.5rem;
+		}
+		&__name {
+			color: $color-grey-1;
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+		&__text {
+			color: $color-grey-1;
+			margin-bottom: 0;
 		}
 	}
 }
