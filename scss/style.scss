@@ -22,12 +22,14 @@ $radius: 4px;
 
 //Box Shadow
 $shadow-contour: 0 0 7px 1px rgba(0,0,0,0.2);
+$shadow-inner: inset 0px 0px 2px 3px rgba(0,0,0,0.2);
 
 //General
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: $color-grey-6;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Proza Libre', sans-serif;
@@ -43,6 +45,18 @@ a {
 		text-decoration: none;
 	}
 }
+input[type=text], input[type=email], textarea {
+	transition: $transition;
+	outline: none;
+	border: 1px solid $color-complementary-2;
+	box-shadow: none;
+  }
+   
+  input[type=text]:focus, input[type=email]:focus, textarea:focus {
+	box-shadow: inset 0 0 5px $color-complementary-3;
+	border: 1px solid $color-complementary-3;
+  }
+
 .hidden {
 	display: none!important;
 }
@@ -74,6 +88,22 @@ a {
 		background-color: lighten($color-complementary-2, 30%);
 		color: #fff;
 	}
+	&--lg {
+		font-size: 1rem;
+		padding: 10px 18px;
+	}
+}
+
+.divider-simple {
+	background-image: linear-gradient(to right,transparent,$color-grey-1,transparent);
+	background-image: -webkit-linear-gradient(left,transparent,$color-grey-1,transparent);
+    border: 0;
+	height: 1px;
+	margin: 3rem 0;
+}
+
+.add-bg {
+	background-color: rgba(0,0,0,0.85);
 }
 
 //Language 
@@ -124,6 +154,12 @@ a {
 	font-weight: bold;
 	.logo-container {
 		display: flex;
+	}
+	.navbar-toggler {
+		.fas {
+			color: #fff;
+			font-size: 2rem;
+		}
 	}
 	.nav-item {
 		margin-right: 2rem;
@@ -212,6 +248,9 @@ a {
 		font-size: 4rem;
 		max-width: 30rem;
 		text-align: center;
+		@media screen and (max-width: 500px) {
+			font-size: 2rem;
+		}
 	}
 }
 
@@ -222,16 +261,29 @@ a {
 			max-width: 100%;
 			height: 100%; 
 		}
+		.col-img {
+			@media screen and (max-width: 767px) {
+				padding-bottom: 2rem;
+			}
+		}
 		.img-container {
 			height: 100%;
-
 			background: url(../img/img-regular-keyboard.jpg) center center no-repeat;
-			background-size: cover;
+			background-size: contain;
+			@media screen and (max-width: 767px) {
+				height: 250px;
+				background-size: cover;
+			}
 		}
 		.col-text {
 			padding-top: 7rem;
 			padding-bottom: 7rem;
 			padding-right: 5rem;
+			@media screen and (max-width: 767px) {
+				padding-bottom: 2rem;
+				padding-top: 2rem;
+				padding-right: 15px;
+			}
 		}
 	}
 }
@@ -239,9 +291,16 @@ a {
 .offer {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+	@media screen and (max-width: 767px) {
+		padding-bottom: 1rem;
+		padding-top: 2rem;
+	}
 	.col-offer {
 		.offer-inner {
 			padding: 2rem 1rem;
+			@media screen and (max-width: 767px) {
+				padding: 1rem 0;
+			}
 			&__ico {
 				position: absolute;
 				left:0;
@@ -251,6 +310,9 @@ a {
 			&__header {
 				position: relative;
 				padding-left: 2.5rem;
+				@media screen and (max-width: 767px) {
+					margin-bottom: 0.5rem;
+				}
 			}
 		}
 	}
@@ -263,11 +325,17 @@ a {
 		height: 100%;
 		background: url(../img/responsieve_mockup.png) center center no-repeat;
 		background-size: contain;
+		@media screen and (max-width: 767px) {
+			height: 250px;
+		}
 	}
 	.col-responsive-text {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 		padding-left: 5rem;
+		@media screen and (max-width: 767px) {
+			padding-left: 15px;
+		}
 	}
 }
 
@@ -276,16 +344,25 @@ a {
 		width: 100%;
 		height: 100%;
 		background: url(../img/img-advise.jpg) center center no-repeat;
-		background-size: cover;
+		background-size: contain;
+		@media screen and (max-width: 767px) {
+			height: 250px;
+			background-size: cover;
+			margin-bottom: 2rem;
+		}
 	}
 	.col-business-text {
 		padding-top: 7rem;
 		padding-bottom: 7rem;
+		@media screen and (max-width: 767px) {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
 	}
 }
 
 .portfolio {
-	padding-top: 5rem;
+	padding-top: 2rem;
 	.row-carousel {
 		max-width: 100%;
 		margin:auto;
@@ -298,16 +375,29 @@ a {
 			top: calc(50% - 1.5rem);
 			border: none;
 			background-color: transparent;
-			font-size: 3rem;
+			font-size: 1rem;
 			color: #fff;
 			cursor: pointer;
 			z-index: 1000000;
+			width: 2rem;
+			height: 2rem;
+			line-height: 0;
+			border-radius: 100px;
+			border: 3px solid white;
 		}
 		.slick-prev {
-			left: 2%;
+			left: 1rem;
+			.fa {
+				position: relative;
+				left: -1px;
+			}
 		}
 		.slick-next {
-			right: 2%;
+			right:  1rem;
+			.fa {
+				position: relative;
+				left: 1px;
+			}
 		}
 	}
 
@@ -315,7 +405,11 @@ a {
 		padding-bottom: 0;
 		overflow: hidden;
 		height: 270px;
-		background-color: $color-grey-2;
+		background-color: $color-grey-5;
+		padding: 0.5rem;
+		@media screen and (max-width: 500px) {
+			height: 310px;
+		}
 		&__link {
 			position: absolute;
 			z-index: 1;
@@ -326,8 +420,8 @@ a {
 				transition: $transition;
 			}
 			&--ico-img {
-				top: -3rem;
-				right: -3rem;
+				top: -4rem;
+				right: -4rem;
 				&:hover {
 					color: lighten($color-base, 30%);
 				}
@@ -348,8 +442,8 @@ a {
 			&:hover {
 				transform: scale(1.1);
 				.portfolio-item__link--ico-img {
-					top: 2rem;
-					right: 3.5rem;
+					top: 1rem;
+					right: 2.5rem;
 				}
 			}
 		}
@@ -441,11 +535,16 @@ a {
 	padding-top: 3rem;
 	background-color: #000;
 	.contact-intro {
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
+	}
+	.col-info {
+		@media screen and (max-width: 767px) {
+			margin-bottom: 2rem;
+		}
 	}
 	.info-item {
 		display: flex;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		&__icon {
 			color: $color-complementary-3;
 			margin-right: 0.5rem;
@@ -464,7 +563,10 @@ a {
 	.col-form {
 		padding: 0 2rem;
 		display: flex;
-    	flex-direction: column;
+		flex-direction: column;
+		@media screen and (max-width: 767px) {
+			padding: 0 15px;
+		}
 		&__name {
 
 		}
@@ -479,6 +581,7 @@ a {
 			margin-bottom: 1rem;
 			padding: 0.5rem 1rem;
 			border-radius: $radius;
+			//box-shadow: $shadow-inner;
 		}
 	}
 	.contact-form__message {
@@ -489,6 +592,11 @@ a {
 		width: 100%;
 		flex-grow: 1;
 		flex-shrink: 0;
+	}
+	.col-about {
+		@media screen and (max-width: 991px) {
+			margin-top: 2rem;
+		}
 	}
 	.about-item {
 		border: 1px solid #fff;
@@ -526,5 +634,14 @@ a {
 			color: $color-grey-1;
 			margin-bottom: 0;
 		}
+	}
+}
+.col-copyright {
+	padding: 15px 1.5rem;
+	margin-top: 1.5rem;
+	color: $color-grey-2;
+	background-color: $color-grey-6;
+	.copyright-paragraph {
+		margin-bottom: 0;
 	}
 }
