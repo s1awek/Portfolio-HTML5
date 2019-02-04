@@ -79,8 +79,10 @@ $(function () {
 	} else {
 		if(navigator.language.toLocaleLowerCase().indexOf('pl') !== -1) {
 			$('html').attr('lang', 'pl');
+			window.document.title = 'Twoje Miejsce W Internecie';
 		} else {
 			$('html').attr('lang', 'en');
+			window.document.title = 'Your Place on the Internet';
 		}
 		$.cookie('lang', $('html').attr('lang'));
 		language = $.cookie('lang');
@@ -92,10 +94,12 @@ $(function () {
 			$.cookie('lang', 'pl');
 			language = $.cookie('lang');
 			$('html').attr('lang', language);
+			window.document.title = 'Twoje Miejsce W Internecie';
 		} else {
 			$.cookie('lang', 'en');
 			language = $.cookie('lang');
 			$('html').attr('lang', language);
+			window.document.title = 'Your Place on the Internet';
 		}
 	});
 });

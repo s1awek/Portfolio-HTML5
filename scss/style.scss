@@ -109,13 +109,13 @@ input[type=text], input[type=email], textarea {
 //Language 
 html:lang(pl) {
 	:lang(en) {
-		display: none;
+		display: none!important;
 	}
 	.nav-link__pl {
-		display: none;
+		display: none!important;
 		& {
 			img {
-				display: none;
+				display: none!important;
 			}
 		}
 	}
@@ -123,28 +123,28 @@ html:lang(pl) {
 		display: block!important;
 		& {
 			img {
-				display: inline-block;
+				display: inline-block!important;
 			}
 		}
 	}
 }
 html:lang(en) {
 	:lang(pl) {
-		display: none;
+		display: none!important;
 	}
 	.nav-link__pl {
 		display: block!important;
 		& {
 			img {
-				display: inline-block;
+				display: inline-block!important;
 			}
 		}
 	}
 	.nav-link__en {
-		display: none;
+		display: none!important;
 		& {
 			img {
-				display: none;
+				display: none!important;
 			}
 		}
 	}
@@ -200,8 +200,8 @@ html:lang(en) {
 			display: inline-block;
 			width:50px;
 			.flag {
-				max-width: 100%;
-				height: auto;
+				width: 100%;
+				height: 20px;
 			}
 		}
 	}
