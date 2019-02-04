@@ -71,4 +71,31 @@ $(function () {
 	AOS.init({
 		duration: 1200
 	});
+	//Change language based on browser language and cookie set by user
+	var language;
+	if($.cookie('lang')) {
+		language = $.cookie('lang');
+		$('html').attr('lang', language);
+	} else {
+		if(navigator.language.toLocaleLowerCase().indexOf('pl') !== -1) {
+			$('html').attr('lang', 'pl');
+		} else {
+			$('html').attr('lang', 'en');
+		}
+		$.cookie('lang', $('html').attr('lang'));
+		language = $.cookie('lang');
+	}
+
+	$('.nav-item__language .nav-link').on('click', function(e) {
+		e.preventDefault();
+		if($('html').attr('lang') === 'en' ) {
+			$.cookie('lang', 'pl');
+			language = $.cookie('lang');
+			$('html').attr('lang', language);
+		} else {
+			$.cookie('lang', 'en');
+			language = $.cookie('lang');
+			$('html').attr('lang', language);
+		}
+	});
 });

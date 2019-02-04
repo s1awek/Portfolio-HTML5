@@ -68,11 +68,31 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 .add-bg {
   background-color: rgba(0, 0, 0, 0.85); }
 
-.lng-pl .en {
+html:lang(pl) :lang(en) {
   display: none; }
 
-.lng-en .pl {
+html:lang(pl) .nav-link__pl {
   display: none; }
+  html:lang(pl) .nav-link__pl img {
+    display: none; }
+
+html:lang(pl) .nav-link__en {
+  display: block !important; }
+  html:lang(pl) .nav-link__en img {
+    display: inline-block; }
+
+html:lang(en) :lang(pl) {
+  display: none; }
+
+html:lang(en) .nav-link__pl {
+  display: block !important; }
+  html:lang(en) .nav-link__pl img {
+    display: inline-block; }
+
+html:lang(en) .nav-link__en {
+  display: none; }
+  html:lang(en) .nav-link__en img {
+    display: none; }
 
 .top-anchor {
   width: 0;

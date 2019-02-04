@@ -107,18 +107,48 @@ input[type=text], input[type=email], textarea {
 }
 
 //Language 
-.lng-pl {
-	.en {
+html:lang(pl) {
+	:lang(en) {
 		display: none;
 	}
-}
-
-.lng-en {
-	.pl {
+	.nav-link__pl {
 		display: none;
+		& {
+			img {
+				display: none;
+			}
+		}
+	}
+	.nav-link__en {
+		display: block!important;
+		& {
+			img {
+				display: inline-block;
+			}
+		}
 	}
 }
-
+html:lang(en) {
+	:lang(pl) {
+		display: none;
+	}
+	.nav-link__pl {
+		display: block!important;
+		& {
+			img {
+				display: inline-block;
+			}
+		}
+	}
+	.nav-link__en {
+		display: none;
+		& {
+			img {
+				display: none;
+			}
+		}
+	}
+}
 //Top anchor for #home
 .top-anchor {
 	width: 0;
