@@ -22,6 +22,33 @@ gulp.task('sass', function () {
   .pipe(gulp.dest('./css'));
 });
 
+gulp.task('copyCSS', function(){
+  return gulp.src('./css/**/*')
+  .pipe( (gulp.dest('prod/css/')) );
+});
+gulp.task('copyJS', function(){
+  return gulp.src('./js/**/*')
+  .pipe( (gulp.dest('prod/js/')) );
+});
+gulp.task('copyIMG', function(){
+  return gulp.src('./img/**/*')
+  .pipe( (gulp.dest('prod/img/')) );
+});
+gulp.task('copyMAPS', function(){
+  return gulp.src('./maps/**/*')
+  .pipe( (gulp.dest('prod/maps/')) );
+});
+gulp.task('copyFONTS', function(){
+  return gulp.src('./fonts/**/*')
+  .pipe( (gulp.dest('prod/fonts/')) );
+});
+gulp.task('copyHTML', function(){
+  return gulp.src('./*.html')
+  .pipe( (gulp.dest('prod/')) );
+});
+
+gulp.task('prod', gulp.series('copyCSS', 'copyJS', 'copyIMG', 'copyMAPS', 'copyFONTS', 'copyHTML'));
+
 gulp.task('watch', function() {
   browserSync.init({
     server: {
