@@ -1,4 +1,5 @@
 $(function () {
+	'use strict';
 	//Activate tooltips for Bootstrap
 	$('[data-toggle="tooltip"]').tooltip();
 
@@ -28,7 +29,9 @@ $(function () {
 	//Ekko lightbox
 	$(document).on('click', '[data-toggle="lightbox"]', function (event) {
 		event.preventDefault();
-		$(this).ekkoLightbox();
+		$(this).ekkoLightbox({
+			alwaysShowClose: true
+		});
 	});
 
 	//Smooth scroling to anchors
@@ -102,4 +105,36 @@ $(function () {
 			window.document.title = 'Your Place on the Internet';
 		}
 	});
+	//Reveal phone number
+	if($('.info-item__link .phone-number').length){
+		$('.info-item__link .phone-number').on('click', function(e){
+			if($(this).parent('a').attr('href') === '#') {
+				e.preventDefault();
+				var a = '+48';
+				var b = '519';
+				var c = '458';
+				var d = '310';
+				var phoneNo = a + b + c + d;
+				var phoneNoReadable = '(' + a + ') ' + b + '-' + c + '-' + d;
+				$(this).parent('a').attr('href', 'tel:' + phoneNo);
+				$(this).find('span').text(phoneNoReadable);		
+			}	
+		});
+	}
+	//Reveal email 
+	if($('.info-item__link .email').length){
+		$('.info-item__link .email').on('click', function(e){
+			if($(this).parent('a').attr('href') === '#') {
+				e.preventDefault();
+				var a = 'hello';
+				var b = '@';
+				var c = 'wellmade.';
+				var d = 'online';
+				var email = a + b + c + d;
+				$(this).parent('a').attr('href', 'mailto:' + email);
+				$(this).find('span').text(email);
+			}			
+		});
+	}
+
 });

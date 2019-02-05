@@ -312,7 +312,7 @@ html:lang(en) .nav-link__en {
       font-size: 1rem;
       color: #fff;
       cursor: pointer;
-      z-index: 1000000;
+      z-index: 1020;
       width: 2rem;
       height: 2rem;
       line-height: 0;
