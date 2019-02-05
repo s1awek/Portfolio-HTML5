@@ -47,7 +47,7 @@ gulp.task('copyHTML', function(){
   .pipe( (gulp.dest('prod/')) );
 });
 
-gulp.task('prod', gulp.series('copyCSS', 'copyJS', 'copyIMG', 'copyMAPS', 'copyFONTS', 'copyHTML'));
+gulp.task('prod', gulp.series('sass', 'copyCSS', 'copyJS', 'copyIMG', 'copyMAPS', 'copyFONTS', 'copyHTML'));
 
 gulp.task('watch', function() {
   browserSync.init({

@@ -75,6 +75,7 @@ $(function () {
 		duration: 1200
 	});
 	//Change language based on browser language and cookie set by user
+	//TODO: Get it working on localhost (cookies)
 	var language;
 	if($.cookie('lang')) {
 		language = $.cookie('lang');
