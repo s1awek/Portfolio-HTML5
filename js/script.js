@@ -105,7 +105,25 @@ $(function () {
 			$('html').attr('lang', language);
 			window.document.title = 'Your Place on the Internet';
 		}
+		addRequired();
 	});
+	function addRequired() {
+		if($('#contactForm').length) {
+			if(language === 'pl') {
+				$('#contactForm :lang(pl):not(.trap)').attr('required', true);
+				$('#contactForm :lang(en):not(.trap)').attr('required', false);
+				$('textarea:lang(pl)').attr('required', true);
+				$('textarea:lang(en)').attr('required', false);
+			} else {
+				$('#contactForm :lang(pl):not(.trap)').attr('required', false);
+				$('#contactForm :lang(en):not(.trap)').attr('required', true);
+				$('textarea:lang(en)').attr('required', true);
+				$('textarea:lang(pl)').attr('required', false);
+			}
+		}
+	}
+	addRequired();
+
 	//Reveal phone number
 	if($('.info-item__link .phone-number').length){
 		$('.info-item__link .phone-number').on('click', function(e){

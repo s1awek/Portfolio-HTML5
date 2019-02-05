@@ -617,16 +617,17 @@ Gdy chcesz zaistnieć w internecie, aby być widocznym dla swoich klientów i po
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8 col-form">
-                    <form action="https://formsubmit.io/send/put your email here" id="contactForm" class="contact-form">
-                        <input lang="pl" required type="text" name="name" placeholder="Imię (Nazwisko) *" class="contact-form__name contact-form__item">
-                        <input lang="en" required type="text" name="name" placeholder="Your Name *" class="contact-form__name contact-form__item">
-                        <input lang="pl" required type="email" name="email" placeholder="Twój email *" class="contact-form__email contact-form__item">
-                        <input lang="en" required type="email" name="email" placeholder="Your email *" class="contact-form__email contact-form__item">
-                        <input lang="pl" type="submit" id="submitForm" class="contact-form__submit contact-form__item hidden">
+                    <form action="https://formsubmit.io/send/hello@wellmade.online" id="contactForm" class="contact-form">
+                        <input lang="pl" type="text" name="name_pl" placeholder="Imię (Nazwisko) *" class="contact-form__name contact-form__item">
+                        <input lang="en" type="text" name="name_en" placeholder="Your Name *" class="contact-form__name contact-form__item">
+                        <input lang="pl" type="email" name="email_pl" placeholder="Twój email *" class="contact-form__email contact-form__item">
+                        <input lang="en" type="email" name="email_en" placeholder="Your email *" class="contact-form__email contact-form__item">
+                        <input type="submit" id="submitForm" class="contact-form__submit contact-form__item hidden">
+                        <input name="_formsubmit_id" class="trap" type="text" style="display:none">
                     </form>
-                    <textarea lang="pl" required name="message" id="message" form="contactForm" class="contact-form__message"
+                    <textarea lang="pl" name="message_pl" id="message" form="contactForm" class="contact-form__message"
                         placeholder="Twoja wiadomość *"></textarea>
-                    <textarea lang="en" required name="message" id="message" form="contactForm" class="contact-form__message"
+                    <textarea lang="en" name="message_en" id="message" form="contactForm" class="contact-form__message"
                     placeholder="Your message *"></textarea>
                     <label class="btn btn-simple btn-simple--lg" for="submitForm" tabindex="0"><span lang="pl">
                             Wyślij
