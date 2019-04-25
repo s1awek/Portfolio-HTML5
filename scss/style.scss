@@ -236,6 +236,7 @@ html:lang(en) {
 		z-index: 1;
 		&:after {
 			content: '';
+			transition: $transition;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -438,7 +439,7 @@ html:lang(en) {
 		padding-bottom: 0;
 		overflow: hidden;
 		height: 270px;
-		background-color: $color-grey-5;
+		background-color: #fff;
 		padding: 0.5rem;
 		@media screen and (max-width: 500px) {
 			height: 310px;
@@ -472,8 +473,10 @@ html:lang(en) {
 			z-index: 0;
 			height: 100%;
 			transition: $transition;
+			opacity: 0.65;
 			&:hover {
 				transform: scale(1.1);
+				opacity: 1;
 				.portfolio-item__link--ico-img {
 					top: 1rem;
 					right: 2.5rem;
@@ -508,57 +511,58 @@ html:lang(en) {
 			font-size: 0.75rem;
 			text-transform: uppercase;
 		}
+
 		&--traficar {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-zoe-traficar-pl.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-zoe-traficar-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--diag {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-diag-pl.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-diag-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--adriana {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-adrianafurniture-com.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-adrianafurniture-com.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--gpec {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-grupagpec-pl.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-grupagpec-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--bydgoszcz {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-visitbydgoszcz-pl.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-visitbydgoszcz-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--pab {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-popsandbangs-com.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-popsandbangs-com.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--eccop {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-eccoprojekt-pl.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-eccoprojekt-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--zdmikp {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-zdmikp-bydgoszcz-pl.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-zdmikp-bydgoszcz-pl.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
 		&--arcadius {
 			.portfolio-item__link-wrap {
-				background: linear-gradient(0deg,#000baa75, #000baa75),url(../img/screen-arcadius-atelier-com.jpg) top left no-repeat;
+				background: linear-gradient(0deg,#000baade, #000baade),url(../img/screen-arcadius-atelier-com.jpg) top left no-repeat;
 				background-size: cover;
 			}
 		}
