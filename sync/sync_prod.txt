@@ -1,0 +1,4 @@
+open winscp-ftp://s1awek:Walery123%24@s1awek.pro-linuxpl.com/domains/wellmade.online/public_html/
+synchronize remote C:\wamp64\www\portfolio-HTML5\prod /domains/wellmade.online/public_html -filemask="|*.git/"
+close
+exit
