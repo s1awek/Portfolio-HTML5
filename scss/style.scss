@@ -474,6 +474,7 @@ html:lang(en) {
 			height: 100%;
 			transition: $transition;
 			opacity: 0.65;
+			box-shadow: 0 0 8px 1px #0000008c;
 			&:hover {
 				transform: scale(1.1);
 				opacity: 1;
